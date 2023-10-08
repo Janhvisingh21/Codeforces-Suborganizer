@@ -7,7 +7,7 @@ saving time.
 # Installation
 First of all, clone or download the above project using
 
-$ git clone https://github.com/Janhvisingh21/Codeforces-Suborganizer
+```$ git clone https://github.com/Janhvisingh21/Codeforces-Suborganizer```
 
 # Install Dependencies
 npm install express request ejs body-parser cheerio
