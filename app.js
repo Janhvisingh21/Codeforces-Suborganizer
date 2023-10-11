@@ -69,6 +69,7 @@ function addSubmission(submission) {
 
 app.post('/', (req, res) => {
     handle = req.body.handle;
+
     request('http://codeforces.com/api/user.status?handle=' + handle + '&from=1&count=2000', (error, response, body) => {
         if (!error && response.statusCode == 200) {
             var allSubmissions = JSON.parse(body)['result'];
@@ -78,7 +79,7 @@ app.post('/', (req, res) => {
             }
             count = acceptedSubmissions.length;
             count--;
-            console.log(count);
+            console.log(count+1);     
             var repeat = setInterval(() => {
                 if (count >= 0) {
                     addSubmission(acceptedSubmissions[count]);
