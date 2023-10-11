@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+
+function newwwwww(){
+    console.log("learning git");
+}
 function addSubmission(submission) {
     var contestID = submission.contestId,
         submissionID = submission.id,
@@ -100,6 +104,8 @@ app.post('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Server started at port 3000!');
 });
+
+
 
 
 //checking new changes
