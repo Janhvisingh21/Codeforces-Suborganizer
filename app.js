@@ -16,10 +16,6 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-
-function newwwwww(){
-    console.log("learning git");
-}
 function addSubmission(submission) {
     var contestID = submission.contestId,
         submissionID = submission.id,
@@ -73,7 +69,6 @@ function addSubmission(submission) {
 
 app.post('/', (req, res) => {
     handle = req.body.handle;
-
     request('http://codeforces.com/api/user.status?handle=' + handle + '&from=1&count=2000', (error, response, body) => {
         if (!error && response.statusCode == 200) {
             var allSubmissions = JSON.parse(body)['result'];
@@ -83,7 +78,7 @@ app.post('/', (req, res) => {
             }
             count = acceptedSubmissions.length;
             count--;
-            console.log(count);   
+            console.log(count);
             var repeat = setInterval(() => {
                 if (count >= 0) {
                     addSubmission(acceptedSubmissions[count]);
@@ -104,8 +99,3 @@ app.post('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Server started at port 3000!');
 });
-
-
-
-
-//checking new changes
