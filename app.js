@@ -79,7 +79,7 @@ app.post('/', (req, res) => {
             }
             count = acceptedSubmissions.length;
             count--;
-            console.log(count+1);     
+            console.log(count);   
             var repeat = setInterval(() => {
                 if (count >= 0) {
                     addSubmission(acceptedSubmissions[count]);
@@ -100,3 +100,6 @@ app.post('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Server started at port 3000!');
 });
+
+
+//checking new changes
